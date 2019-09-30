@@ -1,0 +1,45 @@
+Notes
+
+1) regression -- when something that used to work breaks
+2) snapshots
+ ->> import necessary dependencies
+ ->> render component tree with render and take json snapshot
+ ->> use expect() from jest to perform your assertions with this snapshot
+
+3) Component testing
+ ->> like a unit test, these are not integration tests
+ ->> Does it render, 
+ ->> are sub components rendered?
+ ->> are props handled correctly
+ ->> does it handle events correctly
+ ->> does it handle state correctly
+
+
+
+
+4) What makes a good test
+
+->>test one behavior/function at a time, multiple assertions are ok within on test
+->> enzyme, react-test-renderer, enzyme-adapter-react-16
+->> enzyme is used for shallow rendering, only testing a single level of a react component, no children, renders component with no children
+
+4.5) Spies
+--> functions that contain useful information about how a function is used (jest,fn())
+
+4.5b) Mocks
+-->     __mocks__ 
+--> for tests implementing your own version of certain dependencies. axios for instance.  In order to avoide side effects in unit testing.
+
+5) checks
+--> check for false negatives first in your 
+--> shift + option + up or down  copy block up or down
+--> first test should be rendering without crashing using enzyme's shallow()
+
+6) Misc
+---> spread operator can be used for passing props <Header {...props}/>
+--> Enzyme's instance property of a rendered COmponent will give you access to class state and class methods (setState(can take a function to avoid batching issues)) alternative would be to just pass an object in
+--> Enzyme's foundItem.simulate('click')
+--> Enzyme's window.alert = jest.fn()
+--> The spy directly above would simulate alert('message') triggering in your component
+--> any dependency can be mocked in this way
+
