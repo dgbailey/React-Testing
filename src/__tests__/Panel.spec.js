@@ -8,3 +8,13 @@ describe('<Panel />', () => {
 		shallow(<Panel />);
 	});
 });
+
+describe('<Panel />', () => {
+	it('renders with current 19 Button Components', () => {
+		const panel = shallow(<Panel />);
+		const buttons = panel.find('Button');
+		expect(buttons.length).toBe(19);
+
+	});
+});
+
