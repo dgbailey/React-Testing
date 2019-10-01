@@ -43,3 +43,8 @@ Notes
 --> The spy directly above would simulate alert('message') triggering in your component
 --> any dependency can be mocked in this way
 
+
+7) still todo
+--> the DOM data structure
+--> heaps and trees
+
